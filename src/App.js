@@ -3,9 +3,10 @@ import React, {
 } from 'react';
 import './App.css';
 
-import BusinessList from './components/BusinessList/BusinessList.js';
-import SearchBar from './components/SearchBar/SearchBar.js';
-import Yelp from './util/Yelp.js';
+import BusinessList from './components/BusinessList/BusinessList';
+import SearchBar from './components/SearchBar/SearchBar';
+import Yelp from './util/Yelp';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
 	constructor(props) {
@@ -30,6 +31,7 @@ class App extends Component {
         <h1>Ravenous</h1>
 				<SearchBar searchYelp={this.searchYelp}/>
 				<BusinessList businesses={this.state.businesses} />
+				<Footer />
       </div>
 		);
 	}
