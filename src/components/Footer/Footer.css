@@ -6,13 +6,13 @@
   padding: 1rem 2rem;
 }
 
-h1, h2 {
+.footer h1, .footer h2 {
   padding: 0.66rem;
 	font-family: Poppins, sans-serif;
 	font-size: 1.4rem;
 	color: #fff;
 }
 
-h2 {
+.footer h2 {
   font-size: 1rem;
 }
