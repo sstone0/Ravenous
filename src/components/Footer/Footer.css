@@ -4,6 +4,7 @@
   align-items: center;
   background-color: #cca353;
   padding: 1rem 2rem;
+  bottom: 0;
 }
 
 .footer h1, .footer h2 {

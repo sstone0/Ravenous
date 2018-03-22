@@ -1,9 +1,9 @@
-const clientId = 'FH8LGYDfmoXyoxALo_PJgQ';
-const secret = 'sw7B8O0ctifhxeuzL4pKFPbpqUgbcQukzkVl6hmqrIHJfHpkavGtlhJHDbp7JZyx';
-let accessToken = '';
+const key = '_dynrulimuUYx6OQisbUKrVxSUummTQsJW1FOE1CjEJvJbPWUNQjWCQw2WRImQX1pcKfuxq5YFna93P9OS8tlSZGF5wCxCZoI63D9crhUVk3e_l8fkGhhuyWZ1r2WXYx';
 
 const Yelp = {
-	getAccessToken() {
+	// Previous code to get access token before fetching results. Not needed anymore due to Yelp API changes //
+	// Saved for reference //
+	/*getAccessToken() {
 		if (accessToken) {
 			return new Promise(resolve => resolve(accessToken));
 		}
@@ -18,34 +18,32 @@ const Yelp = {
 			accessToken = jsonResponse.access_token;
 		});
 	},
-
+*/
 	search(term, location, sortBy) {
-		return Yelp.getAccessToken().then(() => {
-			return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
-				headers: {
-					Authorization: `Bearer ${accessToken}`
-				}
-			}).then(response => {
-				return response.json()
-			}).then(jsonResponse => {
-				if (jsonResponse.businesses) {
-					return jsonResponse.businesses.map(business => {
-						return {
-							id: business.id,
-							imageSrc: business.image_url,
-							name: business.name,
-							address: business.location.address1,
-							city: business.location.city,
-							state: business.location.state,
-							zipCode: business.location.zip_code,
-							category: business.categories[0].title,
-							rating: business.rating,
-							reviewCount: business.review_count
-						};
-					});
-				}
-			});
-		})
+		return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
+			headers: {
+				Authorization: `Bearer ${key}`
+			}
+		}).then(response => {
+			return response.json()
+		}).then(jsonResponse => {
+			if (jsonResponse.businesses) {
+				return jsonResponse.businesses.map(business => {
+					return {
+						id: business.id,
+						imageSrc: business.image_url,
+						name: business.name,
+						address: business.location.address1,
+						city: business.location.city,
+						state: business.location.state,
+						zipCode: business.location.zip_code,
+						category: business.categories[0].title,
+						rating: business.rating,
+						reviewCount: business.review_count
+					};
+				});
+			}
+		});
 	}
 };
 
