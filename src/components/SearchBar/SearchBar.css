@@ -5,7 +5,7 @@
   background-image: url('./background_search_desktop.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 25rem;
+  height: 20rem;
 }
 
 .SearchBar-sort-options ul {
@@ -40,6 +40,8 @@
   display: flex;
   justify-content: center;
   margin-bottom: 2.88rem;
+  wn
+  ;
 }
 
 .SearchBar-fields input {
