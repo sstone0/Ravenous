@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://sston0.github.io/Ravenous",
   "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4",
-    "whatwg-fetch": "^2.0.4"
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-scripts": "2.1.3",
+    "whatwg-fetch": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -18,6 +18,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "gh-pages": "^1.2.0"
+    "gh-pages": "^2.0.1"
   }
 }
