@@ -1,1 +1,34 @@
-"use strict";function setOfCachedUrls(e){return e.keys().then(function(e){return e.map(function(e){return e.url})}).then(function(e){return new Set(e)})}var precacheConfig=[["/Ravenous/index.html","5d8a41e52f5783995c026ffd64be5c7e"],["/Ravenous/static/css/main.df24274f.css","a01993a712d6f69ec3765fa8d7e20f60"],["/Ravenous/static/js/main.8b3b57bb.js","e32fe22c4ffbabb8409e413a81bcda1a"],["/Ravenous/static/media/background_search_mobile.5d0905e6.jpg","5d0905e66c87b168792e1cf920c613ee"]],cacheName="sw-precache-v3-sw-precache-webpack-plugin-"+(self.registration?self.registration.scope:""),ignoreUrlParametersMatching=[/^utm_/],addDirectoryIndex=function(e,t){var n=new URL(e);return"/"===n.pathname.slice(-1)&&(n.pathname+=t),n.toString()},cleanResponse=function(e){return e.redirected?("body"in e?Promise.resolve(e.body):e.blob()).then(function(t){return new Response(t,{headers:e.headers,status:e.status,statusText:e.statusText})}):Promise.resolve(e)},createCacheKey=function(e,t,n,r){var a=new URL(e);return r&&a.pathname.match(r)||(a.search+=(a.search?"&":"")+encodeURIComponent(t)+"="+encodeURIComponent(n)),a.toString()},isPathWhitelisted=function(e,t){if(0===e.length)return!0;var n=new URL(t).pathname;return e.some(function(e){return n.match(e)})},stripIgnoredUrlParameters=function(e,t){var n=new URL(e);return n.hash="",n.search=n.search.slice(1).split("&").map(function(e){return e.split("=")}).filter(function(e){return t.every(function(t){return!t.test(e[0])})}).map(function(e){return e.join("=")}).join("&"),n.toString()},hashParamName="_sw-precache",urlsToCacheKeys=new Map(precacheConfig.map(function(e){var t=e[0],n=e[1],r=new URL(t,self.location),a=createCacheKey(r,hashParamName,n,/\.\w{8}\./);return[r.toString(),a]}));self.addEventListener("install",function(e){e.waitUntil(caches.open(cacheName).then(function(e){return setOfCachedUrls(e).then(function(t){return Promise.all(Array.from(urlsToCacheKeys.values()).map(function(n){if(!t.has(n)){var r=new Request(n,{credentials:"same-origin"});return fetch(r).then(function(t){if(!t.ok)throw new Error("Request for "+n+" returned a response with status "+t.status);return cleanResponse(t).then(function(t){return e.put(n,t)})})}}))})}).then(function(){return self.skipWaiting()}))}),self.addEventListener("activate",function(e){var t=new Set(urlsToCacheKeys.values());e.waitUntil(caches.open(cacheName).then(function(e){return e.keys().then(function(n){return Promise.all(n.map(function(n){if(!t.has(n.url))return e.delete(n)}))})}).then(function(){return self.clients.claim()}))}),self.addEventListener("fetch",function(e){if("GET"===e.request.method){var t,n=stripIgnoredUrlParameters(e.request.url,ignoreUrlParametersMatching);(t=urlsToCacheKeys.has(n))||(n=addDirectoryIndex(n,"index.html"),t=urlsToCacheKeys.has(n));!t&&"navigate"===e.request.mode&&isPathWhitelisted(["^(?!\\/__).*"],e.request.url)&&(n=new URL("/Ravenous/index.html",self.location).toString(),t=urlsToCacheKeys.has(n)),t&&e.respondWith(caches.open(cacheName).then(function(e){return e.match(urlsToCacheKeys.get(n)).then(function(e){if(e)return e;throw Error("The cached response that was expected is missing.")})}).catch(function(t){return console.warn('Couldn\'t serve response for "%s" from cache: %O',e.request.url,t),fetch(e.request)}))}});
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
+
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+
+importScripts(
+  "/Ravenous/precache-manifest.35e4846e9514f0a51e81c7c2aa60f32a.js"
+);
+
+workbox.clientsClaim();
+
+/**
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
+ */
+self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerNavigationRoute("/Ravenous/index.html", {
+  
+  blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
+});
