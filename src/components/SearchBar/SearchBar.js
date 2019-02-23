@@ -13,6 +13,7 @@ class SearchBar extends React.Component {
 		this.handleTermChange = this.handleTermChange.bind(this);
 		this.handleLocationChange = this.handleLocationChange.bind(this);
 		this.handleSearch = this.handleSearch.bind(this);
+		this.enterSearch = this.enterSearch.bind(this);
 		this.state = {
 			term: '',
 			location: '',
@@ -49,7 +50,12 @@ class SearchBar extends React.Component {
 
 	handleSearch(event) {
 		this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
-		event.preventDefault();
+	}
+
+	enterSearch(e) {
+		if (e.keyCode === 13) {
+			this.handleSearch();
+		}
 	}
 
 	renderSortByOptions() {
@@ -70,11 +76,11 @@ class SearchBar extends React.Component {
 					<ul>{this.renderSortByOptions()}</ul>
 				</div>
 				<div className="SearchBar-fields">
-					<input onChange={this.handleTermChange} placeholder="Search Businesses or food" />
-					<input onChange={this.handleLocationChange} placeholder="Where?" />
+					<input onChange={this.handleTermChange} placeholder="Search Businesses or food" onKeyDown={this.enterSearch} />
+					<input onChange={this.handleLocationChange} placeholder="Where?" onKeyDown={this.enterSearch} />
 				</div>
 				<div onClick={this.handleSearch} className="SearchBar-submit">
-					<a>Let's Go</a>
+					<button>Let's Go</button>
 				</div>
 			</div>
 		);

@@ -31,7 +31,8 @@
   color: #d4cfcf;
 }
 
-.SearchBar-sort-options li.active, .SearchBar-sort-options li.active:hover {
+.SearchBar-sort-options li.active,
+.SearchBar-sort-options li.active:hover {
   border-bottom: 1px solid #f0c36c;
   color: #f0c36c;
 }
@@ -60,8 +61,9 @@
   text-align: center;
 }
 
-.SearchBar-submit a {
+.SearchBar-submit button {
   border-radius: 4px;
+  border: 0;
   padding: 0.72rem 1.7rem;
   background-color: #cca353;
   color: #ffffff;
@@ -74,18 +76,27 @@
   background-color: #a7874b;
 }
 
+@media only screen and (max-width: 900px) {
+  .SearchBar-fields {
+    margin: 1rem;
+  }
+}
+
 @media only screen and (max-width: 560px) {
   .SearchBar {
     background-image: url('./background_search_mobile.jpg');
   }
+
   .SearchBar-sort-options ul {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+
   .SearchBar-fields {
     flex-direction: column;
     align-items: center;
   }
+
   .SearchBar-fields input {
     margin-right: 0;
     margin-bottom: 0.86rem;

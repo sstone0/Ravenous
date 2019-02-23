@@ -1,19 +1,34 @@
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   background-color: #cca353;
   padding: 1rem 2rem;
   bottom: 0;
 }
 
-.footer h1, .footer h2 {
+.footer .wrapper {
+  max-width: 1800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footer h1,
+.footer h2 {
   padding: 0.66rem;
-	font-family: Poppins, sans-serif;
-	font-size: 1.4rem;
-	color: #fff;
+  font-family: Poppins, sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
 }
 
 .footer h2 {
   font-size: 1rem;
+}
+
+@media only screen and (max-width: 560px) {
+  .footer .wrapper {
+    max-width: 1800px;
+    flex-direction: column;
+    margin: 0 auto;
+  }
 }

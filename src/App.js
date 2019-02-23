@@ -1,6 +1,4 @@
-import React, {
-	Component
-} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
 import BusinessList from './components/BusinessList/BusinessList';
@@ -28,11 +26,11 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-        <h1>Ravenous</h1>
-				<SearchBar searchYelp={this.searchYelp}/>
+				<h1>Ravenous</h1>
+				<SearchBar searchYelp={this.searchYelp} />
 				<BusinessList businesses={this.state.businesses} />
 				<Footer />
-      </div>
+			</div>
 		);
 	}
 };
