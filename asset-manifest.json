@@ -1,14 +1,16 @@
 {
-  "main.css": "/Ravenous/static/css/main.0deff8cc.chunk.css",
-  "main.js": "/Ravenous/static/js/main.daf550a9.chunk.js",
-  "main.js.map": "/Ravenous/static/js/main.daf550a9.chunk.js.map",
-  "static/js/1.779e7811.chunk.js": "/Ravenous/static/js/1.779e7811.chunk.js",
-  "static/js/1.779e7811.chunk.js.map": "/Ravenous/static/js/1.779e7811.chunk.js.map",
-  "runtime~main.js": "/Ravenous/static/js/runtime~main.df37e39a.js",
-  "runtime~main.js.map": "/Ravenous/static/js/runtime~main.df37e39a.js.map",
-  "static/css/main.0deff8cc.chunk.css.map": "/Ravenous/static/css/main.0deff8cc.chunk.css.map",
-  "static/media/SearchBar.css": "/Ravenous/static/media/background_search_desktop.902df4c5.jpg",
-  "index.html": "/Ravenous/index.html",
-  "precache-manifest.35e4846e9514f0a51e81c7c2aa60f32a.js": "/Ravenous/precache-manifest.35e4846e9514f0a51e81c7c2aa60f32a.js",
-  "service-worker.js": "/Ravenous/service-worker.js"
+  "files": {
+    "main.css": "/Ravenous/static/css/main.5d470038.chunk.css",
+    "main.js": "/Ravenous/static/js/main.8a644b57.chunk.js",
+    "main.js.map": "/Ravenous/static/js/main.8a644b57.chunk.js.map",
+    "runtime~main.js": "/Ravenous/static/js/runtime~main.9078551a.js",
+    "runtime~main.js.map": "/Ravenous/static/js/runtime~main.9078551a.js.map",
+    "static/js/2.2668f2aa.chunk.js": "/Ravenous/static/js/2.2668f2aa.chunk.js",
+    "static/js/2.2668f2aa.chunk.js.map": "/Ravenous/static/js/2.2668f2aa.chunk.js.map",
+    "index.html": "/Ravenous/index.html",
+    "precache-manifest.af0784add72b11112a88ec04e5b15759.js": "/Ravenous/precache-manifest.af0784add72b11112a88ec04e5b15759.js",
+    "service-worker.js": "/Ravenous/service-worker.js",
+    "static/css/main.5d470038.chunk.css.map": "/Ravenous/static/css/main.5d470038.chunk.css.map",
+    "static/media/SearchBar.css": "/Ravenous/static/media/background_search_mobile.5d0905e6.jpg"
+  }
 }
